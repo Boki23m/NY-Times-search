@@ -9,8 +9,8 @@ $("#submitButton").on("click", function () {
 
     var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     url += '?' + $.param({
-        'api-key': "b1a09889bcdd4da097104b67d56bfa8e",
-        'q': "" + searchBox + "",
+        'api-key': "dDsmJxErd2ioucRXFJIRQsDrY9XdlAZ2",
+        'q': searchBox,
         'begin_date': startYear + "0101",
         'end_date': endYear + "1231"
     });
@@ -18,10 +18,10 @@ $("#submitButton").on("click", function () {
         url: url,
         method: 'GET',
     }).then(function (result) {
-        // console.log(result);
+        console.log(result);
         var response = result.response.docs;
         console.log(response[0].headline.main);
-
+        
         for (var i = 0; i < resultsNo; i++) {
             var articleDiv = $("<div>");
 

@@ -1,0 +1,47 @@
+.container {
+    max-width: 960px;
+}
+
+.jumbotron {
+    text-align: center;
+    font-weight: 900;
+    font-size: 80px;
+    font-family: 'Old English Text MT', 'Arial Narrow', Arial, serif;
+    background-image: url("img/nttimes.jpg");
+    background-color: #cccccc;
+    background-blend-mode: overlay;
+    height: 300px;
+    padding: 2rem;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.user-input {
+    width: 100%;
+}
+#searchPara {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+form {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+#topArticles {
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+footer {
+    text-align: center;
+    border-top: 2px solid lightgray;
+    padding: 10px;
+}
