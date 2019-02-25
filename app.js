@@ -19,9 +19,13 @@ $("#submitButton").on("click", function () {
         method: 'GET',
     }).then(function (result) {
         console.log(result);
+        if (result.response.meta.hits == 0 ) {
+            console.log("No articles found!");
+            $("#result").append("<h3> No articles found! Please expand your search parameters.</h3>");
+        }
+
         var response = result.response.docs;
-        console.log(response[0].headline.main);
-        
+
         for (var i = 0; i < resultsNo; i++) {
             var articleDiv = $("<div>");
 
@@ -30,17 +34,16 @@ $("#submitButton").on("click", function () {
             var pubDate = response[i].pub_date;
             var url = response[i].web_url;
 
-            var h1 = $("<h1>").text(headline);
+            var h3 = $("<h3>").text(headline);
             var p1 = $("<p>").text(snippet);
             var p2 = $("<p>").text(pubDate);
             var p3 = $("<a href=>").text(url);
 
-            articleDiv.append(h1);
+            articleDiv.append(h3);
             articleDiv.append(p1);
             articleDiv.append(p2);
             articleDiv.append(p3);
 
-            console.log(headline);
             $("#result").append(articleDiv);
         }
 

@@ -15,29 +15,56 @@
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body a {
+    word-break: break-all;
+}
+
+.card-body  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+}
+
+#result p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#result h3 {
+    margin-top: 1rem;
+    font-weight: 600;
 }
 
 .user-input {
     width: 100%;
 }
-#searchPara {
+
+#result {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 15px 30px;
+}
+
+#searchPara, #topArticles{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border: 2px solid lightgray;
     border-radius: 2px;
-    padding: 10px;
+    padding: 5px 15px;
     background-color: lightgray;
 }
 
 form {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border: 2px solid lightgray;
     border-radius: 2px;
-    padding: 10px;
+    padding: 8px;
 }
 
-#topArticles {
-    border: 2px solid lightgray;
-    border-radius: 2px;
-    padding: 10px;
-    background-color: lightgray;
+.form-group {
+    margin-bottom: 0;
 }
 
 footer {
@@ -45,3 +72,21 @@ footer {
     border-top: 2px solid lightgray;
     padding: 10px;
 }
+
+@media only screen and (min-width: 875px) {
+    .jumbotron {
+      font-size: 80px;
+    }
+  }
+  
+  @media only screen and (max-width: 874.99px) {
+    .jumbotron {
+      font-size: 70px;
+    }
+  }
+
+  @media only screen and (max-width: 568.99px) {
+    .jumbotron {
+      font-size: 55px;
+    }
+  }
