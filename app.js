@@ -36,8 +36,8 @@ $("#submitButton").on("click", function () {
 
             var h3 = $("<h3>").text(headline);
             var p1 = $("<p>").text(snippet);
-            var p2 = $("<p>").text(pubDate);
-            var p3 = $("<a href=>").text(url);
+            var p2 = $("<p>").text("Publication date: " + pubDate.slice(0, 10));
+            var p3 = $("<a href='" + url + "'>" + "Continue reading..." + "</a>");
 
             articleDiv.append(h3);
             articleDiv.append(p1);
